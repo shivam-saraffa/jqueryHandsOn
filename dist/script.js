@@ -1,8 +1,14 @@
-let container_visibility = 1;
-function func1(){
-    $("img").fadeToggle(); 
-}
-function func2(){
+//only runs after the html document has loaded to avoid any bugs.
+$('document').ready(main); 
 
-    $("#container").fadeToggle();
+
+function main () {
+    $("#btn1").click(func1);
+    $("#btn2").click(func2);
+    function func1(){
+        $("img").fadeToggle(); 
+    }
+    function func2(){
+        $("#container").fadeToggle();
+    }
 }
